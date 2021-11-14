@@ -21,4 +21,13 @@ export class ClientesComponent implements OnInit {
     );
   }
 
+  delete(clientes:Clientes):void{
+    console.log("si funciona el delete");
+    this.clienteService.delete(clientes.numero_documento).subscribe(
+      client => this.clienteService.getAll().subscribe(
+        response  => this.clientes = response
+      )
+    );
+  }
+
 }

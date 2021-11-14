@@ -22,7 +22,8 @@
                                         <th>Contribuyente</th>
                                         <th>Regimen contable</th>
                                         <th>tipo de documento</th>
-                                        <th>Acciones</th>
+                                        <th>Editar</th>
+                                        <th>Eliminar</th>
                                       </tr>
                                     </thead>
                                     <tbody>
@@ -40,9 +41,15 @@
                                         <td>{{cliente.regimen_contable}}</td>					            	       					            	    
                                         <td>{{cliente.tipo_documento}}</td>    
                                         <td>
-                                          <a [routerLink]="['/clientes/editar', cliente.numero_documento]" ><img class="img_client" src="../../assets/icons/pencil.png" alt=""></a>
-                                          <a href="#"><img class="img_client" src="../../assets/icons/delete.png" alt=""></a>
+                                          <button class="btn boton-accion" [routerLink]="['/clientes/editar', cliente.numero_documento]" >
+                                            <i class="fas fa-pencil-alt"></i>
+                                          </button>                                         
                                         </td> 
+                                        <td>
+                                          <button class="btn boton-accion" (click)="delete(cliente)">
+                                            <i class="far fa-trash-alt"></i>
+                                          </button>
+                                        </td>
                                      </tr>     
                                     </tbody>
                                   </table>
