@@ -10,7 +10,6 @@ import { AppComponent } from './app.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { BarraLateralComponent } from './shared/barra-lateral/barra-lateral.component';
 import { HeaderComponent } from './shared/header/header.component';
-import { FooterComponent } from './shared/footer/footer.component';
 import { AgregarClienteComponent } from './clientes/agregar-cliente.component';
 import { AppRoutingModule } from './app-routing.module';
 import { EditarClienteComponent } from './clientes/editar-cliente.component';
@@ -21,7 +20,6 @@ import { EditarClienteComponent } from './clientes/editar-cliente.component';
     ClientesComponent,
     BarraLateralComponent,
     HeaderComponent,
-    FooterComponent,
     AgregarClienteComponent,
     EditarClienteComponent
   ],
